@@ -34,7 +34,17 @@ class GreetingController extends Controller
         return view('message.freeword', ['jiyuu' => $unnko]);
     }
 
+    public function random($kimetsu_yaiba)
 
+    {
+        $kimetsu = [
+            "俺は俺の責務を全うする!! ここにいる者は誰も死なせない!!",
+            "頑張れ!! 人は心が原動力だから 心はどこまでも強くなれる!!",
+            "生殺与奪の権を他人に握らせるな!!",
+            "老いることも死ぬことも人間という儚い生き物の美しさだ 老いるからこそ死ぬからこそ 堪らなく愛おしく尊いのだ"
+        ];
+        $rand_key = array_rand($kimetsu);
+        $kimetsu_yaiba = $kimetsu[$rand_key];
+        return view('message.randmessage', ['rand' => $kimetsu_yaiba]);
+    }
 }
-
-
