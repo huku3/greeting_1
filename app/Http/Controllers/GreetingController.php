@@ -29,4 +29,12 @@ class GreetingController extends Controller
         }
         return view('message.greeting', ['jikann' => $time, 'aisatsu' => $result]);
     }
+    public function freeword($unnko)
+    {
+        return view('message.freeword', ['jiyuu' => $unnko]);
+    }
+
+
 }
+
+
